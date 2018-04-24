@@ -1,0 +1,8 @@
+extends ../layout
+
+block content
+    h3= 'Ton nom'
+    form(method='POST', action=`/users/${path}?_method=PUT`)
+        label(for='name') nom : 
+            input#name(type='text', name='name')
+        button(type='submit') Envoyer

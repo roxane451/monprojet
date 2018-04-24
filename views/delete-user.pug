@@ -1,0 +1,8 @@
+extends ../layout
+
+block content
+    h3=`Ton id est ${id}`
+    form(method='POST', action='/users/${id}?_method=DELETE')   
+            label(for='id') id : 
+            input#id(type='text', name='id')
+        button(type='submit') Enregistrer
